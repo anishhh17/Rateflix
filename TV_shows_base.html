@@ -4,84 +4,153 @@
 	<title> TV shows </title>
 </head>
 <style>
-	p {color:white;}	
+	p {color:white;}
+	* {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+	}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: 200px;
+  width: 257px;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
 </style>
 <body style="background-color:firebrick">
 	<h1>TV shows</h1>
 	<p>List of our favourite TV shows and our rating of how good it actually is!</p>
-	<table style:"border:1px;">
+	<table>
 	<style>
-	th {th {text-align: center; vertical-align: font-size:20px;}}	
+	th {text-align: center; font-size:"20px";}	
 	</style>
 	<tr>
 		<th style="font-size:25px;">TV show</th>
 		<th>	</th>
-    		<th style="font-size:25px;">Rateflix rating</th>
+    	<th style="font-size:25px;">Rateflix rating</th>
  	</tr>
  	<tr>
     		<td>F.R.I.E.N.D.S</td>
-    		<td><img src="friends.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+    		<td class="img__wrap">
+			<img class="img__img" src="friends.jpg" height=150 width=250></img>
+			<p class="img__description">I'll be there for you</p>
+			</td>
+			<td></td>
 	</tr>
 	<tr>
     		<td>Stranger things</td>
-    		<td><img src="Stranger things.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="Stranger things.jpg" height=150 width=250></img>
+				<p class="img__description">Stranger things main theme track</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>Game of thrones</td>
-    		<td><img src="GOT.jpg" border=3 height=150 width=200></img></td>
-  		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="GOT.jpg" height=150 width=250></img>
+				<p class="img__description">Game of Thrones main title track</p>
+			</td>
+			<td></td>
 	</tr>
 	<tr>
     		<td>Walking dead</td>
-    		<td><img src="walking dead.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="walking dead.jpg"  height=150 width=250></img>
+				<p class="img__description">Walking Dead main title track</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>Gilmore Girls</td>
-    		<td><img src="gilmore girls.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="gilmore girls.jpg"  height=150 width=250></img>
+				<p class="img__description">Where you lead</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>Lucifer</td>
-    		<td><img src="lucifer.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="lucifer.jpg"  height=150 width=250></img>
+				<p class="img__description">Horns</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>Money Hiest</td>
-    		<td><img src="money heist.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="money heist.jpg"  height=150 width=250></img>
+				<p class="img__description">Bella Ciao</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>Suits</td>
-    		<td><img src="suits.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="suits.jpg"  height=150 width=250></img>
+				<p class="img__description">Greenback Boogie</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>Supernatural</td>
-    		<td><img src="supernatural.jpg" border=3 height=150 width=200></img></td>
-  		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="supernatural.jpg"  height=150 width=250></img>
+				<p class="img__description">Highway to hell</p>
+			</td>
+			<td></td>
 	</tr>
 	<tr>
     		<td>Locke and Key</td>
-    		<td><img src="Locke and key.jpg" border=3 height=150 width=200></img></td>
-  		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="Locke and key.jpg"  height=150 width=250></img>
+				<p class="img__description">You should see me in a crown</p>
+			</td>
+			<td></td>
 	</tr>
 	<tr>
     		<td>The Office(American)</td>
-    		<td><img src="office.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="office.jpg"  height=150 width=250></img>
+				<p class="img__description">The office main theme song</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>Brooklyn Nine Nine</td>
-    		<td><img src="B99.jpg" border=3 height=150 width=200></img></td>
-		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="B99.jpg"  height=150 width=250></img>
+				<p class="img__description">Brooklyn nine nine the main theme song</p>
+			</td>
+			<td></td>
   	</tr>
 	<tr>
     		<td>How I met your Mother</td>
-    		<td><img src="Himym.jpg" border=3 height=150 width=200></img></td>
-  		<td></td>
+			<td class="img__wrap">
+				<img class="img__img" img src="Himym.jpg"  height=150 width=250></img>
+				<p class="img__description">Hey Beautiful</p>
+			</td>
+			<td></td>
 	</tr>
 </table>
 	
