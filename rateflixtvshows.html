@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
 </head>
 <style>
 	p {color:white;}
@@ -45,6 +47,17 @@ body{
 <body style="background-color:white; text-align: center; ">
 	<h1 style="background-color: rgb(214, 35, 4); border:solid,15px,red; font-size:60px; text-shadow: 3px 3px 3px black;">TV shows</h1>
 	<br/>
+	<script type="text/javascript">
+		function audioplay(imgholder,audioholder) {
+			console.log("Hello world!1");
+			imgholder.addEventListener("click", function() {
+				audioholder.play();
+			});
+			imgholder.addEventListener("dblclick", function() {
+				audioholder.pause();
+			})
+		}
+	</script>
 	<p>List of our favourite TV shows and our rating of how good it actually is!</p>
 	<br/>
 	<font size="2" face="Arial" >
@@ -57,107 +70,173 @@ body{
  	<tr>
     		<td>F.R.I.E.N.D.S</td>
     		<td class="img__wrap">
-			<img class="img__img" src="friends.jpg" height=150 width=250></img>
-			<p class="img__description">I'll be there for you</p>
+			<img class="img__img" id="FriendsImg" src="Assets/posters/TVShows/Friends.jpg" height=150 width=250></img>
+			<audio src="Assets/Songs/TVShows-Song/Friends.mp3" id="FriendsAudio"> </audio>
+			<script type="text/javascript">
+				let friendsimg=document.querySelector("#FriendsImg");
+				let friendsaudio=document.querySelector("#FriendsAudio");
+				audioplay(friendsimg,friendsaudio);
+			</script>
 			</td>
-			<td></td>
+			<td> 8.9 </td>
 	</tr>
 	<tr>
     		<td>Stranger things</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="Stranger things.jpg" height=150 width=250></img>
-				<p class="img__description">Stranger things main theme track</p>
+				<img class="img__img" id="StrangerThingsimg" src="Assets/posters/TVShows/Stranger Things.jpg" height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Stranger Things.mp3" id="StrangerThingsAudio"> </audio>
+				<script type="text/javascript">
+					let STimg=document.querySelector("#StrangerThingsimg");
+					let STaudio=document.querySelector("#StrangerThingsAudio");
+					audioplay(STimg,STaudio);
+				</script>
 			</td>
-			<td></td>
+			<td> 8.8 </td>
   	</tr>
 	<tr>
     		<td>Game of thrones</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="GOT.jpg" height=150 width=250></img>
-				<p class="img__description">Game of Thrones main title track</p>
+				<img class="img__img" id="GOTimg" src="./Assets/posters/TVShows/Game of Thrones.jpg" height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Game of Thrones.mp3" id="GOTaudio"> </audio>
+				<script type="text/javascript">
+					let gotimg=document.querySelector("#GOTimg");
+					let gotaudio=document.querySelector("#GOTaudio");
+					audioplay(gotimg,gotaudio);
+				</script>
 			</td>
-			<td></td>
+			<td> 9.3 </td>
 	</tr>
 	<tr>
     		<td>Walking dead</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="walking dead.jpg"  height=150 width=250></img>
-				<p class="img__description">Walking Dead main title track</p>
+				<img class="img__img" id="WDimg" src="Assets/posters/TVShows/Walking dead.jpg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Walking dead.mp3" id="WDaudio"> </audio>
+				<script type="text/javascript">
+					let wdimg=document.querySelector("#WDimg");
+					let wdaudio=document.querySelector("#WDaudio");
+					audioplay(wdimg,wdaudio);
+				</script>
 			</td>
-			<td></td>
+			<td> 8.2 </td>
   	</tr>
 	<tr>
     		<td>Gilmore Girls</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="gilmore girls.jpg"  height=150 width=250></img>
-				<p class="img__description">Where you lead</p>
+				<img class="img__img" id="GGimg" src="Assets/posters/TVShows/Gilmore girls.jpeg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Gilmore girls.mp3" id="GGaudio"></audio>
+				<script type="text/javascript">
+					let ggimg=document.querySelector("#GGimg");
+					let ggaudio=document.querySelector("#GGaudio");
+					audioplay(ggimg,ggaudio);
+				</script>
 			</td>
-			<td></td>
+			<td> 8.1 </td>
   	</tr>
 	<tr>
     		<td>Lucifer</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="lucifer.jpg"  height=150 width=250></img>
-				<p class="img__description">Horns</p>
+				<img class="img__img" id="Luciferimg" src="Assets/posters/TVShows/Lucifer.jpg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Lucifer.mp3" id="Luciferaudio"> </audio>
+				<script type="text/javascript">
+					let luciferimg=document.querySelector("#Luciferimg");
+					let luciferaudio=document.querySelector("#Luciferaudio");
+					audioplay(luciferimg,luciferaudio);
+				</script>
 			</td>
-			<td></td>
+			<td>8.2 </td>
   	</tr>
 	<tr>
-    		<td>Money Hiest</td>
+    		<td>Money Heist</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="money heist.jpg"  height=150 width=250></img>
-				<p class="img__description">Bella Ciao</p>
+				<img class="img__img" id="MHimg" src="Assets/posters/TVShows/Money heist.jpg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Money heist.mp3" id="MHaudio"> </audio>
+				<script type="text/javascript">
+					let mhimg=document.querySelector("#MHimg");
+					let mhaudio=document.querySelector("#MHaudio");
+					audioplay(mhimg,mhaudio);
+				</script>
 			</td>
-			<td></td>
+			<td>8.4</td>
   	</tr>
 	<tr>
     		<td>Suits</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="suits.jpg"  height=150 width=250></img>
-				<p class="img__description">Greenback Boogie</p>
+				<img class="img__img" id="Suitsimg" src="Assets/posters/TVShows/Suits.jpg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Suits.mp3" id="Suitsaudio"> </audio>
+				<script type="text/javascript">
+					let suitsimg=document.querySelector("#Suitsimg");
+					let suitsaudio=document.querySelector("#Suitsaudio");
+					audioplay(suitsimg,suitsaudio);
+				</script>
 			</td>
-			<td></td>
+			<td>8.5</td>
   	</tr>
 	<tr>
     		<td>Supernatural</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="supernatural.jpg"  height=150 width=250></img>
-				<p class="img__description">Highway to hell</p>
+				<img class="img__img" id="Supernaturalimg" src="Assets/posters/TVShows/Supernatural.jpg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Supernatural.mp3" id="Supernaturalaudio"> </audio>
+				<script type="text/javascript">
+					let supernaturalimg=document.querySelector("#Supernaturalimg");
+					let supernaturalaudio=document.querySelector("#Supernaturalaudio");
+					audioplay(supernaturalimg,supernaturalaudio);
+				</script>
 			</td>
-			<td></td>
+			<td>8.4</td>
 	</tr>
 	<tr>
     		<td>Locke and Key</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="Locke and key.jpg"  height=150 width=250></img>
-				<p class="img__description">You should see me in a crown</p>
+				<img class="img__img" id="LKimg" src="Assets/posters/TVShows/Locke and key.jpeg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Locke and key.mp3" id="LKaudio"> </audio>
+				<script type="text/javascript">
+					let lkimg=document.querySelector("#LKimg");
+					let lkaudio=document.querySelector("#LKaudio");
+					audioplay(lkimg,lkaudio);
+				</script>
 			</td>
-			<td></td>
+			<td>7.4</td>
 	</tr>
 	<tr>
     		<td>The Office(American)</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="office.jpg"  height=150 width=250></img>
-				<p class="img__description">The office main theme song</p>
+				<img class="img__img" id="Officeimg" src="Assets/posters/TVShows/The office.jpg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/The office.mp3" id="Officeaudio"> </audio>
+				<script type="text/javascript">
+					let officeimg=document.querySelector("#Officeimg");
+					let officeaudio=document.querySelector("#Officeaudio");
+					audioplay(officeimg,officeaudio);
+				</script>
 			</td>
-			<td></td>
+			<td>8.9</td>
   	</tr>
 	<tr>
     		<td>Brooklyn Nine Nine</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="B99.jpg"  height=150 width=250></img>
-				<p class="img__description">Brooklyn nine nine the main theme song</p>
+				<img class="img__img" id="B99img" src="Assets/posters/TVShows/Brooklyn nine nine.jpg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/Brooklyn nine nine.mp3" id="B99audio"> </audio>
+				<script type="text/javascript">
+					let b99img=document.querySelector("#B99img");
+					let b99audio=document.querySelector("#B99audio");
+					audioplay(b99img,b99audio);
+				</script>
 			</td>
-			<td></td>
+			<td>8.4</td>
   	</tr>
 	<tr>
     		<td>How I met your Mother</td>
 			<td class="img__wrap">
-				<img class="img__img" img src="Himym.jpg"  height=150 width=250></img>
-				<p class="img__description">Hey Beautiful</p>
+				<img class="img__img" id="HIMYMimg" src="Assets/posters/TVShows/How I met your mother.jpeg"  height=150 width=250></img>
+				<audio src="Assets/Songs/TVShows-Song/How I met your mother.mp3" id="HIMYMaudio"> </audio>
+				<script type="text/javascript">
+					let himymimg=document.querySelector("#HIMYMimg");
+					let himymaudio=document.querySelector("#HIMYMaudio");
+					audioplay(himymimg,himymaudio);
+				</script>
 			</td>
-			<td></td>
+			<td>8.3</td>
 	</tr>
+	
 </table>
 </font>
 </body>
