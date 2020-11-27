@@ -14,11 +14,27 @@
 <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<style>
+	img {
+		width:300;
+		height: 500;
+	}
+</style>
 </head>
 
 <body style="background-color:black">
 	<script type="text/javascript" src="js/materialize.min.js"></script>
-	
+	<script type="text/javascript">
+		function audioplay(imgholder,audioholder) {
+			console.log("Hello world!1");
+			imgholder.addEventListener("click", function() {
+				audioholder.play();
+			});
+			imgholder.addEventListener("dblclick", function() {
+				audioholder.pause();
+			})
+		}
+	</script>
 	<div class="card-panel">
 		<div class="red-text text-darken-2" style="text-align: center;font-size: 30px;font-weight: 800;">RATEFLIX</div>
 		<div class="red-text text-darken-2" style="text-align: center;font-size: 20px;font-weight: 600;">Movies</div>
@@ -39,90 +55,102 @@
 		<div class="col s16 m2">
 	      <div class="card red">
 		    <div class="card-image waves-effect waves-block waves-light">
-		  <img class="activator" src="assets/1.jpg">
+		  <img class="activator" id="BlackPantherimg" src="Assets/posters/Movies/Black Panther.jpg" width="300" height="300">
+		  <audio src="Assets/Songs/Movies-Song/Black Panther.mp3" id="BlackAudio"> </audio>
+			<script type="text/javascript">
+				let blackimg=document.querySelector("#BlackPantherimg");
+				let blackaudio=document.querySelector("#BlackAudio");
+				audioplay(blackimg,blackaudio);
+			</script>
 		</div>
 		<div class="card-content">
-		  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		  <span class="card-title activator grey-text text-darken-4">Black Panther<i class="material-icons right">more_vert</i></span>
 		  <p><a href="#">This is a link</a></p>
-		</div>
-		<div class="card-reveal">
-		  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		  <p>Here is some more information about this product that is only revealed once clicked on.</p>
 		</div>
 	  </div>
 	  </div>
 	  <div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/2.jpg">
+		<img class="activator" id="JPImg" src="Assets/posters/Movies/Jurassic park.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Jurassic park.mp3" id="JPAudio"> </audio>
+			<script type="text/javascript">
+				let jpimg=document.querySelector("#JPImg");
+				let jpaudio=document.querySelector("#JPAudio");
+				audioplay(jpimg,jpaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Jurassic park<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/3.jpg">
+		<img class="activator" id="TBCImg" src="Assets/posters/Movies/The breakfast club.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/The breakfast club.mp3" id="TBCAudio"> </audio>
+			<script type="text/javascript">
+				let tbcimg=document.querySelector("#TBCImg");
+				let tbcaudio=document.querySelector("#TBCAudio");
+				audioplay(tbcimg,tbcaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">The Breakfast Club <i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/4.jpg">
+		<img class="activator" id="ASIBImg" src="Assets/posters/Movies/A star is born.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/A star is born.mp3" id="ASIBAudio"> </audio>
+			<script type="text/javascript">
+				let asibimg=document.querySelector("#ASIBImg");
+				let asibaudio=document.querySelector("#ASIBAudio");
+				audioplay(asibimg,asibaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">A Star is Born<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/5.jpg">
+		<img class="activator" id="TBImg" src="Assets/posters/Movies/The bodyguard.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/The bodyguard.mp3" id="TBAudio"> </audio>
+			<script type="text/javascript">
+				let tbimg=document.querySelector("#TBImg");
+				let tbaudio=document.querySelector("#TBAudio");
+				audioplay(tbimg,tbaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">The bodyguard<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/6.jpg">
+		<img class="activator" id="SWImg" src="Assets/posters/Movies/Star wars.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Star wars.mp3" id="SWAudio"> </audio>
+			<script type="text/javascript">
+				let swimg=document.querySelector("#SWImg");
+				let swaudio=document.querySelector("#SWAudio");
+				audioplay(swimg,swaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Star wars<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
@@ -131,90 +159,102 @@
 		<div class="col s16 m2">
 	      <div class="card red">
 		    <div class="card-image waves-effect waves-block waves-light">
-		  <img class="activator" src="assets/7.jpg">
+		  <img class="activator" id="BHImg" src="Assets/posters/Movies/Big hero 6.jpg" width="300" height="300">
+		  <audio src="Assets/Songs/Movies-Song/Big hero 6.mp3" id="BHAudio"> </audio>
+			<script type="text/javascript">
+				let bhimg=document.querySelector("#BHImg");
+				let bhaudio=document.querySelector("#BHAudio");
+				audioplay(bhimg,bhaudio);
+			</script>
 		</div>
 		<div class="card-content">
-		  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		  <span class="card-title activator grey-text text-darken-4">Big Hero 6<i class="material-icons right">more_vert</i></span>
 		  <p><a href="#">This is a link</a></p>
-		</div>
-		<div class="card-reveal">
-		  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		  <p>Here is some more information about this product that is only revealed once clicked on.</p>
 		</div>
 	  </div>
 	  </div>
 	  <div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/8.jpg">
+		<img class="activator" id="LKImg" src="Assets/posters/Movies/Lion king.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Lion king.mp3" id="LKAudio"> </audio>
+			<script type="text/javascript">
+				let lkimg=document.querySelector("#LKImg");
+				let lkaudio=document.querySelector("#LKAudio");
+				audioplay(lkimg,lkaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Lion king<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/9.jpg">
+		<img class="activator" id="MImg" src="Assets/posters/Movies/Moana.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Moana.mp3" id="MAudio"> </audio>
+			<script type="text/javascript">
+				let mimg=document.querySelector("#MImg");
+				let maudio=document.querySelector("#MAudio");
+				audioplay(mimg,maudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Moana<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/10.jpg">
+		<img class="activator" id="SImg" src="Assets/posters/Movies/Skyfall.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Skyfall.mp3" id="SAudio"> </audio>
+			<script type="text/javascript">
+				let simg=document.querySelector("#SImg");
+				let saudio=document.querySelector("#SAudio");
+				audioplay(simg,saudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Skyfall<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/11.jpg">
+		<img class="activator" id="GBImg" src="Assets/posters/Movies/Ghostbusters.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Ghostbusters.mp3" id="GBAudio"> </audio>
+			<script type="text/javascript">
+				let gbimg=document.querySelector("#GBImg");
+				let gbaudio=document.querySelector("#GBAudio");
+				audioplay(gbimg,gbaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Ghostbusters<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/12.jpg">
+		<img class="activator" id="DMImg" src="Assets/posters/Movies/Despicable me.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Despicable me.mp3" id="DMAudio"> </audio>
+			<script type="text/javascript">
+				let dmimg=document.querySelector("#DMImg");
+				let dmaudio=document.querySelector("#DMAudio");
+				audioplay(dmimg,dmaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Despicable me<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
@@ -223,90 +263,102 @@
 		<div class="col s16 m2">
 	      <div class="card red">
 		    <div class="card-image waves-effect waves-block waves-light">
-		  <img class="activator" src="assets/13.jpg">
+		  <img class="activator" id="M8Img" src="Assets/posters/Movies/8 mile.jpg" width="300" height="300">
+		  <audio src="Assets/Songs/Movies-Song/8 Mile.mp3" id="M8Audio"> </audio>
+			<script type="text/javascript">
+				let m8img=document.querySelector("#M8Img");
+				let m8audio=document.querySelector("#M8Audio");
+				audioplay(m8img,m8audio);
+			</script>
 		</div>
 		<div class="card-content">
-		  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		  <span class="card-title activator grey-text text-darken-4">8 Mile<i class="material-icons right">more_vert</i></span>
 		  <p><a href="#">This is a link</a></p>
-		</div>
-		<div class="card-reveal">
-		  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		  <p>Here is some more information about this product that is only revealed once clicked on.</p>
 		</div>
 	  </div>
 	  </div>
 	  <div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/14.jpg">
+		<img class="activator" id="SMImg" src="Assets/posters/Movies/Sound of music.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Sound of music.mp3" id="SMAudio"> </audio>
+			<script type="text/javascript">
+				let smimg=document.querySelector("#SMImg");
+				let smaudio=document.querySelector("#SMAudio");
+				audioplay(smimg,smaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Sound of music<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/15.jpg">
+		<img class="activator" id="HGImg" src="Assets/posters/Movies/Hunger games.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Hunger games.mp3" id="HGAudio"> </audio>
+			<script type="text/javascript">
+				let hgimg=document.querySelector("#HGImg");
+				let hgaudio=document.querySelector("#HGAudio");
+				audioplay(hgimg,hgaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Hunger games<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/16.jpg">
+		<img class="activator" id="HAImg" src="Assets/posters/Movies/Home alone.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Home alone.mp3" id="HAAudio"> </audio>
+			<script type="text/javascript">
+				let haimg=document.querySelector("#HAImg");
+				let haaudio=document.querySelector("#HAAudio");
+				audioplay(haimg,haaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Home alone<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/17.jpg">
+		<img class="activator" id="SPImg" src="Assets/posters/Movies/Spiderman.jpeg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/Spiderman.mp3" id="SPAudio"> </audio>
+			<script type="text/javascript">
+				let spimg=document.querySelector("#SPImg");
+				let spaudio=document.querySelector("#SPAudio");
+				audioplay(spimg,spaudio);
+			</script> 
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Spiderman: Into the Spiderverse<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/18.jpg">
+		<img class="activator" id="NYImg" src="Assets/posters/Movies/New years eve.jpeg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/New years eve.mp3" id="NYAudio"> </audio>
+			<script type="text/javascript">
+				let nyimg=document.querySelector("#NYImg");
+				let nyaudio=document.querySelector("#NYAudio");
+				audioplay(nyimg,nyaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">New years eve<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
@@ -315,45 +367,51 @@
 		<div class="col s16 m2">
 	      <div class="card red">
 		    <div class="card-image waves-effect waves-block waves-light">
-		  <img class="activator" src="assets/19.jpg">
+		  <img class="activator" id="MADImg" src="Assets/posters/Movies/Madagascar.jpg" width="300" height="300">
+		  <audio src="Assets/Songs/Movies-Song/Madagascar.mp3" id="MADAudio"> </audio>
+			<script type="text/javascript">
+				let madimg=document.querySelector("#MADImg");
+				let madaudio=document.querySelector("#MADAudio");
+				audioplay(madimg,madaudio);
+			</script>
 		</div>
 		<div class="card-content">
-		  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		  <span class="card-title activator grey-text text-darken-4">Madagascar<i class="material-icons right">more_vert</i></span>
 		  <p><a href="#">This is a link</a></p>
-		</div>
-		<div class="card-reveal">
-		  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		  <p>Here is some more information about this product that is only revealed once clicked on.</p>
 		</div>
 	  </div>
 	  </div>
 	  <div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/20.jpg">
+		<img class="activator" id="MUImg" src="Assets/posters/Movies/Mummy3.jpg" width="300" height="300">
+		<audio src="Assets/Songs/Movies-Song/ Mummy3.mp3" id="MUAudio"> </audio>
+			<script type="text/javascript">
+				let muimg=document.querySelector("#MUImg");
+				let muaudio=document.querySelector("#MUAudio");
+				audioplay(muimg,muaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Mummy3<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
 	<div class="col s16 m2">
 		<div class="card red">
 		  <div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="assets/21.jpg">
+		<img class="activator" id="JBImg" src="Assets/posters/Movies/Jungle book.jpeg" width="100" height="300">
+		<audio src="Assets/Songs/Movies-Song/Jungle book.mp3" id="JBAudio"> </audio>
+			<script type="text/javascript">
+				let jbimg=document.querySelector("#JBImg");
+				let jbaudio=document.querySelector("#JBAudio");
+				audioplay(jbimg,jbaudio);
+			</script>
 	  </div>
 	  <div class="card-content">
-		<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+		<span class="card-title activator grey-text text-darken-4">Jungle book<i class="material-icons right">more_vert</i></span>
 		<p><a href="#">This is a link</a></p>
-	  </div>
-	  <div class="card-reveal">
-		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-		<p>Here is some more information about this product that is only revealed once clicked on.</p>
 	  </div>
 	</div>
 	</div>
