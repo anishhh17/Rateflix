@@ -1,87 +1,56 @@
-import React from 'react';
-import ReactDOM from'react-dom';
-import FriendsImg from './Assets/posters/TVShows/Friends.jpg'
-import FriendsAudio from './Assets/Songs/TVShows-Song/Friends.mp3'
-import StrangerThingsImg from './Assets/posters/TVShows/Stranger Things.jpg'
-import StrangerThingsAudio from './Assets/Songs/TVShows-Song/Stranger Things.mp3'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const imagePath=[{
-    name: 'Friends',
-    isrc: FriendsImg,
-    asrc: FriendsAudio,
-},
-{
-    name: 'Stranger Things',
-    isrc: StrangerThingsImg,
-    asrc: StrangerThingsAudio,
-}];
-
-class Heading extends React.Component {
-    render() {
-        const headingstyle={
-            backgroundColor: 'rgb(214,35,4)',
-            fontSize: 60,
-            textAlign: 'center'
-        }
+const divStyle={
+          position: 'fixed',
+          top: '35%',
+          left: '40%',
+    }
+const h1Style={
+    fontSize:'400%'
+}
+const buttonStyle={
+    fontSize: '30px',
+    borderRadius: '8px',
+}
+class MyMainPage extends React.Component {
+    render () {
         return (
-            <h1 style={headingstyle}>TV shows</h1>
-        )
+                <h1 style={h1Style}> RATEFLIX </h1>)
     }
 }
 
-class ShowDisplay extends React.Component {
+class MovieButton extends React.Component {
+    
+      render() {
+            return (
+              <button style={buttonStyle} onClick={(e) => {
+                                  e.preventDefault();
+                                  window.location.href='./Movies.js';}}>MOVIES</button>
+                );
+          }
+    }
+
+class TVShowButton extends React.Component {
     
     render() {
-        
-        var i,imgsrc,audiosrc;
-        for(i=0;i<imagePath.length;i++)
-        {
-            if(imagePath[i].name === this.props.name)
-            {
-                imgsrc=imagePath[i].isrc;
-                audiosrc=imagePath[i].asrc;
-                break;
-            }
+          return (
+            <button style={buttonStyle} onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href='./TVshows.js';}}>TV SHOWS</button>
+              );
         }
-        const imgid=this.props.name+"Img"
-        let audio= new Audio(audiosrc)
-        const start= () => {
-            audio.play();
-        }
-
-        const stop= () => {
-            audio.pause();
-        }
-        const headerStyle={
-            color:'black',
-            fontSize: 20,
-            fontFamily: 'Ariel',
-        }
+  }
+class FinalTouch extends React.Component {
+    render() {
         return (
-            <div>
-                <h2 style={headerStyle}>{this.props.name}</h2>
-                <img src={imgsrc} id={imgid} alt={this.props.name} height={300} width={300} onMouseEnter={start} onMouseLeave={stop}></img>
+        <div style={divStyle}>
+            <MyMainPage />
+            <MovieButton />
+            <TVShowButton />
             </div>
         )
     }
 }
-class Site extends React.Component {
-    render() {
-        const bodyStyle={
-            backgroundColor:'white'
-        };
-        return(
-            <body style={bodyStyle}>
-                <Heading />
-                <hr></hr>
-                <ShowDisplay name="Friends" />
-                <ShowDisplay name="Stranger Things" />
-            </body>
-        )
-    }
-}
+ReactDOM.render(<FinalTouch />,document.getElementById('root'));
 
-ReactDOM.render(
-    <Site />,
-    document.getElementById('root')
-);
